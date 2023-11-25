@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% block content %}
+
+
+
+
+
+<form action="{% url 'listagem_usuarios' %}" method="post">
+    <div class="quasetudo">
+        <div>Cadastre-se</div>
+        
+        <div class="nome1">
+            {% csrf_token %}
+            <label class="sr-only" for="inlineFormInputName">Nome</label>
+            <input name="nome" type="text" class="form-control" id="inlineFormInputName" placeholder="Nome">
+        </div>
+        <div class="nome2">
+            <label class="sr-only" for="inlineFormInputGroupUsername">Idade</label>
+            <div class="input-group">
+
+                <input name='idade' type="text" class="form-control" id="inlineFormInputGroupUsername"
+                    placeholder="Idade">
+            </div>
+        </div>
+        <div class="nome3">
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="autoSizingCheck2">
+                <label class="form-check-label" for="autoSizingCheck2">
+                    Lembrar de mim
+                </label>
+
+            </div>
+        </div>
+        <div class="col-auto my-1">
+            <button type="submit" class="btn btn-primary">Enviar</button>
+        </div>
+    </div>
+</form>
+
+
+
+
+
+{% endblock %}
